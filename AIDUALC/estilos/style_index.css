@@ -1,0 +1,56 @@
+/* Estilos index */
+
+body, html {
+    height: 100%; /* Asegura que el cuerpo y el HTML ocupen toda la altura de la ventana */
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+}
+
+main {
+    background-image: url("../imagenes/estrellas_rosas.jpg"); 
+    background-size: cover;
+    min-height: 90vh; /* Establece una altura mínima del 100% del viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    image-rendering: pixelated;
+    margin: 0; 
+    padding: 0; 
+}
+
+.btn-comprar {
+    background-color: #fdedf8;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+}
+
+.btn-comprar a {
+    color: #333; /* Color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.btn-comprar a:hover {
+    color: #333; /* Cambia el color del texto al pasar el mouse */
+}
+
+.slogan {
+    color: #fff; /* Color blanco para contrastar con el fondo oscuro */
+    font-size: 45px;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para resaltar el texto */
+    margin-top: 20px; /* Ajuste el margen superior según sea necesario */
+    text-align: center; /* Asegúrate de que el texto esté centrado */
+    background-color: #ffffff4d;
+}

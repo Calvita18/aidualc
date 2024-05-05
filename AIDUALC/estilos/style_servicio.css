@@ -1,0 +1,83 @@
+/* Estilos Servicio */
+* {
+    font-family: "Playfair Display", serif;
+}
+
+.form_wrap {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background-image: url("../imagenes/estrella_difuminada.jpg");
+    background-position: 50%;
+}
+
+.form_wrap .info_title h2 {
+    font-size: 24px;
+}
+
+.form_wrap .info_items p {
+    color: #333;
+    font-size: 18px;
+}
+
+.form_wrap .form_contact h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.form_wrap .form-group label {
+    color: #333;
+    font-size: 18px;
+}
+
+.form_wrap .btn-enviar {
+    background-color: #ff90c2;
+    border-color: #fe61af;
+}
+
+.form_wrap .btn-enviar:hover{
+    background-color: #ff90c2;
+    border-color: #fe61af;
+}
+
+.noVisible{
+    display: none;
+
+}
+
+.visible{
+    font-size: 16px;
+}
+
+.toast-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+.close{
+    background-color: red; 
+    color: white; 
+}
+
+.toast {
+    width: 500px;
+    height: 150px;
+}
+
+.toast-body {
+    margin-top: 20px; 
+    font-size: 20px;
+    text-align: center;
+}
+
+.toast-container .toast.bg-success {
+    background-color: #d4edda !important; /* Cambia este color por el verde más claro que desees */
+    border-color: #c3e6cb !important; /* Puedes ajustar el color del borde si es necesario */
+}
+
+.letra_pequena{
+    font-size: 14px;
+}
