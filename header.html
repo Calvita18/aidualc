@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aidualc</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../estilos/style_hif.css">
     <script src="https://kit.fontawesome.com/bd054b17a6.js" crossorigin="anonymous"></script> <!--iconos-->
-    <style>
-      
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+   
 </head>
 
 <body>
@@ -24,25 +24,49 @@
                 </a>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Estilo Romántico</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="estiloRomanticoDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Estilo Romántico
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="estiloRomanticoDropdown">
+                                <a class="dropdown-item" href="#">Camisetas</a>
+                                <a class="dropdown-item" href="#">Pantalones</a>
+                                <a class="dropdown-item" href="#">Accesorios</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Estilo Retro</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="estiloRetroDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Estilo Retro
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="estiloRetroDropdown">
+                                <a class="dropdown-item" href="#">Camisetas</a>
+                                <a class="dropdown-item" href="#">Pantalones</a>
+                                <a class="dropdown-item" href="#">Accesorios</a>
+                            </div>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="../inicio/index.php">AIDUALC</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Estilo Rockero</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="estiloRockeroDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Estilo Rockero
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="estiloRockeroDropdown">
+                                <a class="dropdown-item" href="#">Camisetas</a>
+                                <a class="dropdown-item" href="#">Pantalones</a>
+                                <a class="dropdown-item" href="#">Accesorios</a>
+                            </div>
                         </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="../paginas/servicio.php">Servicio al cliente</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="iconos-header ml-auto"> <!-- Añadí la clase "ml-auto" para alinear los iconos a la derecha -->
+            <div class="iconos-header ml-auto">
                 <a href="../login/login.php"><i class="fas fa-user"></i></a>
                 <a href="#"><i class="fas fa-shopping-basket"></i></a>
                 <a href="../inicio/logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
@@ -53,4 +77,5 @@
 </body>
 
 </html>
+
 
