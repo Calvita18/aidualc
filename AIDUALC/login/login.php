@@ -7,16 +7,14 @@
     <link href="./../estilos/style_login.css" rel="stylesheet" type="text/css"></link>
     <script src="./../js_deverdad/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <title>Inicio de Sesión</title>
 </head>
 <body>
 
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
+            <div class="card justify-content-center">
                 <div class="card-header text-center"><img src="./../imagenes/AIDUALC.png" style="width: 130px; border-radius: 50%;" alt="logo"></div>
                 <div class="card-body justify-content-center p-4">
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
@@ -36,7 +34,6 @@
                                 
                             </div>
                         </div>
-
                         <input type="submit" value="Enviar" class="btn btn-primary"  id="enviar">
                         <p class="cuenta">¿No tienes cuenta? <a href="registro.php" id="enlace">¡Regístrate!</a></p>
                     </form>
@@ -45,11 +42,8 @@
             </div>
         </div>
     </div>
-</div>
 
 
-
-    
     <?php
     require_once("Usuario.php");
     require_once("Admin.php");

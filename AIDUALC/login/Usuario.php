@@ -30,7 +30,7 @@ class Usuario{
         if($stmt_cliente->rowCount() > 0){
             session_start();
             $_SESSION["correo"] = $correo;
-            header("Location: ../index.php");  
+            header("Location: ../inicio/index.php");  
            
         }else{
             return false;

@@ -1,15 +1,21 @@
 /* Estilos del header */
-header {
-    /* background-color: #fdedf8;
-    padding: 5px 10px;
-    height: 100px;
-   display: flex;
-    align-items: center; */
+.navbar-principal {
+    background-color: #fdedf8;
+    /* height:100px; */
+}
+
+.navbar-brand {
+    margin-right: 0;
+    padding: 5px; 
+}
+
+.navbar-brand img {
+    height: 50px; 
 }
 
 #logo {
-    width: 120px;
-    height: auto;
+    width: 100px;
+    height: 90px;
 }
 
 .iconos-header {
@@ -17,14 +23,14 @@ header {
     /* align-items: right; */
     float: left;
     margin: 0;
-    left: 25%;
-    transform: translatex(-50%);
+    left: 10%;
+    transform: translatex(-38%);
     position: relative;
 }
 
 .iconos-header a {
     color: #333;
-    margin-right: 20px;
+    margin-right: 15px;
     font-size: 24px;
 }
 
@@ -35,10 +41,11 @@ header {
 .navbar-nav {
         float: left;
         margin: 0;
-        left: 60%;
+        left: 50%;
         transform: translatex(-50%);
         position: relative;
         /* display: block; */
+       
 }
 
 nav ul li a {
@@ -67,26 +74,14 @@ nav ul li a {
     background-color: #ff69b4 !important;
 }
 
-/* Estiloss para ocupar toda la página */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-
-main {
-    flex-grow: 1;
-}
-
-/* Estilos términos */
+/* Estilos términos y cookies */
 .terminos-main {
-    padding: 20px;
     text-align: center;
     font-family: "Playfair Display", serif;
     background-image: url("../imagenes/estrella_hiper_dif.jpg");
-    /* background-position:20px; */
-
+    background-position: center; 
+    background-repeat: repeat;
+    padding-bottom: 50px;
 }
 
 section {
@@ -98,59 +93,112 @@ h2 {
     font-weight: bold;
 }
 
+.titulo{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 p {
     color: #333;
     font-size: 25px;
 }
 
-/* Estilos footer */
-footer {
-    background-color: #fdedf8;
-    padding: 13px 0; /* Reducción del relleno */
+.terminos-main-cookies{
+    padding: 20px;
+    text-align: center;
     font-family: "Playfair Display", serif;
+    background-image: url("../imagenes/besos.jpg");
+    background-size: cover; 
+    background-position: center; 
+}
+/* Estilos footer */
+footer .main-footer{ 
+     padding: 20px 0; 
+     background: #fdedf8; 
+     font-family: "Playfair Display", serif;
+     font-size:18px;
+}
+
+footer ul{  
+    padding-left: 0;
+    list-style: none;
+}
+
+.gmail{
+    font-size: 18px;
+}
+
+.footer-copyright { 
+    background: #ffd4f2;
+     padding: 5px 0;
+     font-family: "Playfair Display", serif;
+}
+
+.footer-copyright nav ul {  
+    list-style: none; 
+    margin: 0;  
+    padding: 0;
+}
+
+.footer-copyright nav ul li {
+     border-left: 1px solid #636262;
+     display: inline-block; 
+     line-height: 12px; 
+     margin: 0; 
+     padding: 0 8px;
+}
+
+.footer-copyright nav ul li a{ 
+     color: #969696;
+}
+
+.footer-copyright p {
+     color: #969696; 
+     margin: 2px;
+}
+
+.widget-title span {
+    background: #ffd4f2;
+    display: block; 
+    height: 1px;
+    margin-top: 25px;
+    position: relative;
+    width: 20%;
+}
+
+.widget-title span::after {
+    background: inherit;
+    content: "";
+    height: inherit;  
+    position: absolute;
+    top: -4px;
+    width: 50%;
+}
+
+
+.widget li a{ 
     color: #333;
-    text-align: center;
-    width: 100%;
-    bottom: 0;
-    left: 0;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.iconos-footer {
-    color: #333;
-    font-size: 24px;
-}
-
-.iconos-footer a {
-    color: #333;
-    margin-right: 10px;
-    text-decoration: none;
-}
-
-.iconos-footer a:hover {
+.widget li a:hover{ 
     color: #ff69b4;
 }
 
-.footer-terminos {
-    text-align: center;
+ul.iconos-footer a{
+     margin: 0;
+     padding: 0;
+     width: auto;
+     color: #333;
+     font-size: 25px;
 }
 
-.footer-terminos a {
-    color: #333;
-    margin-right: 10px;
-    text-decoration: none;
-    font-size: 24px;
+ul.iconos-footer a {
+    display: inline-block;
+    padding: 0;
+    margin-left: 5px;
 }
 
-.footer-terminos a:hover {
-    color: #ff69b4;
+ul.iconos-footer a:hover {
+    color:#ff69b4;
 }
 
-.copyright {
-    font-size: 24px;
-}

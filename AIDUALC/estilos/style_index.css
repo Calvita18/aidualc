@@ -52,5 +52,5 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para resaltar el texto */
     margin-top: 20px; /* Ajuste el margen superior según sea necesario */
     text-align: center; /* Asegúrate de que el texto esté centrado */
-    background-color: #ffffff4d;
+    /* background-color: #ffffff4d; */
 }

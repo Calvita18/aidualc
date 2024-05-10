@@ -8,6 +8,8 @@
     <script src="../js_deverdad/servicio.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/bd054b17a6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
  
     <title>Servicio al cliente</title>
 </head>

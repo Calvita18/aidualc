@@ -10,6 +10,11 @@
     padding: 30px;
     background-image: url("../imagenes/estrella_difuminada.jpg");
     background-position: 50%;
+    
+}
+
+.container{
+margin-top: 40px;
 }
 
 .form_wrap .info_title h2 {

@@ -17,7 +17,6 @@
 <body>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
             <div class="card">
                 <div class="card-header"><img src="./../imagenes/AIDUALC.png" style="width: 150px; border-radius: 50%;" alt="logo"></div>
                 <div class="card-body justify-content-center p-4 ">

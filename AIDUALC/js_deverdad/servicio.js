@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {//añadir evento de cl
 });
 
 function ocultarToast() {
-    $('.toast').toast('hide');
+    $('.toast').hide(); 
 }
+
 
 function mostrarToast() {
     $('.toast').toast('show');
