@@ -68,7 +68,7 @@ function comprueba(){
             document.getElementById("mtelefono").className="visible";
         }else{
             validarTelefono(document.getElementById("telf").value)?telefono=1:document.getElementById("mtelefono").className="visible"
-            document.getElementById("mtelefono").innerText="Por favor, introduzcan un número válido.";
+            document.getElementById("mtelefono").innerText="Por favor, introduzca un número válido.";
         }
 
     if(document.getElementById("contra").value==""){

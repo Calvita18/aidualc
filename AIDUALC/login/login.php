@@ -19,9 +19,9 @@
                 <div class="card-body justify-content-center p-4">
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                         <div class="form-group row">
-                            <label for="correo" class="form-label col-12">Correo electrónico:</label>
+                            <label for="nombre" class="form-label col-12">Nombre:</label>
                             <div class="col-12">
-                                <input type="email" name="correo" id="correo" class="form-control" required>
+                                <input type="text" name="nombre" id="nombre" class="form-control" required>
                             </div>
                         </div>
 
@@ -49,11 +49,11 @@
     require_once("Admin.php");
 
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $correo = trim(htmlspecialchars($_POST["correo"]));
+        $nombre = trim(htmlspecialchars($_POST["nombre"]));
         $pass = trim(htmlspecialchars($_POST["pass"]));
 
-        if(empty($correo)){
-            $errors[] = "Debes introducir un correo válido.<br>";
+        if(empty($nombre)){
+            $errors[] = "Debes introducir un nombre.<br>";
         }
 
         if(empty($pass)){
@@ -66,15 +66,15 @@
             }
         }else{
             $usuario = new Usuario(); 
-        if(!$usuario->verificarCliente($correo, $pass)) { 
+        if(!$usuario->verificarCliente($nombre, $pass)) { 
             
             $admin = new Admin(); 
-            if(!$admin->verificarAdmin($correo, $pass)) { 
+            if(!$admin->verificarAdmin($nombre, $pass)) { 
                 echo "Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo."; 
             } 
         }
     }
-    }
+}
     ?>
 
 </body>

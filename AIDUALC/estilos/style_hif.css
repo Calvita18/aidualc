@@ -1,7 +1,6 @@
 /* Estilos del header */
 .navbar-principal {
     background-color: #fdedf8;
-    /* height:100px; */
 }
 
 .navbar-brand {
@@ -20,17 +19,32 @@
 
 .iconos-header {
     display: flex;
-    /* align-items: right; */
-    float: left;
-    margin: 0;
-    left: 10%;
-    transform: translatex(-38%);
-    position: relative;
+    margin-right: 5px; 
+    margin-left: 10px; 
 }
 
+.iconos-header2 {
+    /* display: flex; */
+    margin-right: 5px; 
+    margin-left: 200px; 
+    display:inline-block;
+    
+}
+
+@media (max-width: 768px) { 
+    .iconos-header {
+        margin-left: -17px; 
+        display: inline-block; 
+    }
+
+    .iconos-header2 {
+        margin-left: -20px; 
+        display: inline-block; 
+    }
+}
 .iconos-header a {
     color: #333;
-    margin-right: 15px;
+    margin-right: 10px;
     font-size: 24px;
 }
 
@@ -39,12 +53,13 @@
 }
 
 .navbar-nav {
-        float: left;
-        margin: 0;
-        left: 50%;
-        transform: translatex(-50%);
+        /* float: left; */
+        /* margin: 0; */
+        /* left: 50%;
+        transform: translatex(-50%); */
         position: relative;
         /* display: block; */
+        margin-left: 30px;
        
 }
 
@@ -57,11 +72,11 @@ nav ul li a {
 }
 
 .navbar-nav li a.nav-link {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .navbar-nav .nav-item {
-    margin-right: 20px; /* Añade un margen entre cada opción de navegación */
+    margin-right: 13px; 
 }
 
 .dropdown-menu {
@@ -73,6 +88,12 @@ nav ul li a {
 .dropdown-item:hover {
     background-color: #ff69b4 !important;
 }
+
+.navbar-text{
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+}
+
 
 /* Estilos términos y cookies */
 .terminos-main {

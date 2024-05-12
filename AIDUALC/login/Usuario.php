@@ -18,18 +18,19 @@ class Usuario{
         $this->conn = null;
     }
 
-    public function verificarCliente($correo, $pass){
-        $query_cliente = "SELECT email, contrasena FROM clientes WHERE email = :correo AND contrasena = :pass";
-
+    public function verificarCliente($nombre, $pass){
+        $query_cliente = "SELECT nombre, contrasena FROM clientes WHERE nombre = :nombre AND contrasena = md5(:pass)";
+    
         $stmt_cliente = $this->conn->prepare($query_cliente);
-
-        $parametros = [':correo' =>$correo, ':pass'=>$pass];
-
+    
+        $parametros = [':nombre' =>$nombre, ':pass'=>$pass];
+    
         $stmt_cliente->execute($parametros);
-
+    
         if($stmt_cliente->rowCount() > 0){
+            $usuario = $stmt_cliente->fetch(PDO::FETCH_ASSOC);
             session_start();
-            $_SESSION["correo"] = $correo;
+            $_SESSION["nombre"] = $usuario['nombre']; 
             header("Location: ../inicio/index.php");  
            
         }else{
@@ -37,7 +38,7 @@ class Usuario{
         }
         $stmt_cliente = null;
     }
-
+    
     public function registrarCliente($nombre, $apellido, $email, $contra, $fecha, $dir, $telf){
         // Verificar si el correo ya existe en la base de datos
         $query_email = "SELECT COUNT(*) FROM clientes WHERE email = :email";
@@ -67,8 +68,9 @@ class Usuario{
             if ($stmt->rowCount() > 0) {
                 echo "Se ha registrado correctamente."; // Mostramos un mensaje de éxito
                 session_start();
-                $_SESSION["email"] = $email; // Iniciamos sesión y guardamos el email en la sesión
-                header("Location: ../index.php"); // Redireccionamos al usuario a la página de inicio
+                $_SESSION["email"] = $email; 
+                $_SESSION["nombre"] = $nombre; // Guardar el nombre en la sesión
+                header("Location: ..inicio//index.php"); // Redireccionamos al usuario a la página de inicio
                 // exit();
             } else {
                 echo "Se ha producido un error al registrar el usuario."; // Mostramos un mensaje de error
@@ -79,6 +81,7 @@ class Usuario{
     
         $stmt_email  = null; // Liberamos los recursos de la consulta de verificación
     }
+    
     
     }
 ?>

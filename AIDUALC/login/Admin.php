@@ -17,17 +17,17 @@ class Admin{
         $this->conn = null;
     }
 
-   public function verificarAdmin($correo, $pass){
-        $query = "SELECT email, contrasena FROM administradores WHERE email = :correo AND contrasena = md5(:pass)";
+   public function verificarAdmin($nombre, $pass){
+        $query = "SELECT nombre, contrasena FROM administradores WHERE nombre = :nombre AND contrasena = md5(:pass)";
 
         $stmt = $this->conn->prepare($query);
 
-        $stmt->execute([':correo' => $correo, ':pass' => $pass]);
+        $stmt->execute([':nombre' => $nombre, ':pass' => $pass]);
 
         if($stmt->rowCount() > 0){
             session_start();
-            $_SESSION["correo"] = $correo;
-            header("Location: inicio_admin.php"); 
+            $_SESSION["nombre"] = $nombre;
+            header("Location: ../inicio/index_admin.html"); 
             
         } else {
             return false;

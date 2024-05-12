@@ -14,7 +14,7 @@
     <title>Servicio al cliente</title>
 </head>
 <body>
-    <?php require_once("../header-footer/header.html")?>
+    <?php require_once("../header-footer/header.php")?>
 
     <main class="d-flex align-items-center justify-content-center min-vh-80" name="formulario_servicio">
         <section class="container">

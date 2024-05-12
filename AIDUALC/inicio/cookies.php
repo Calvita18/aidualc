@@ -10,7 +10,7 @@
  </head> 
 <body>
     <header>
-    <?php include_once ('../header-footer/header.html'); ?>
+    <?php include_once ('../header-footer/header.php'); ?>
     </header>
     
     <main class="terminos-main-cookies">
