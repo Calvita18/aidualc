@@ -21,27 +21,32 @@
     display: flex;
     margin-right: 5px; 
     margin-left: 10px; 
+
 }
 
 .iconos-header2 {
-    /* display: flex; */
     margin-right: 5px; 
     margin-left: 200px; 
     display:inline-block;
-    
 }
 
-@media (max-width: 768px) { 
+/* @media (max-width: 768px) { 
     .iconos-header {
         margin-left: -17px; 
         display: inline-block; 
-    }
+    } */
 
-    .iconos-header2 {
+    /* .iconos-header2 {
         margin-left: -20px; 
         display: inline-block; 
-    }
-}
+    } */
+/* 
+    .iconos-header2 a:last-child {
+        margin-left: 0; 
+    } */
+
+/* } */
+
 .iconos-header a {
     color: #333;
     margin-right: 10px;

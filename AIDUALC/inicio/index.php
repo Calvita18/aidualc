@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,22 +21,31 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="carousel-caption d-none d-md-block">
-                <h5 class="text-white">Deslumbra con el estilo del milenio en cada paso que des.</h5>
-                <!-- <a href="estilo_romantico.php" class="btn btn-comprar">Comprar</a> -->
+                <div class="estilo">
+                    <h1 class="move-up">Estilo retro</h1>
+                </div>             
+                <h5 class="slogan">Deslumbra con el estilo del milenio en cada paso que des.</h5>
+                <button class="btn-comprar"><a href ="#">Comprar</a></button>
             </div>
             <img src="../imagenes/estilo_romantico_fondo.jpg" class="d-block w-100 img-fluid" alt="...">
         </div>
         <div class="carousel-item">
             <div class="carousel-caption d-none d-md-block">
-                <h5 class="text-white">Deslumbra con el estilo del milenio en cada paso que des.</h5>
-                <p>Descripción de la Diapositiva 2.</p>
+                <div class="estilo">
+                    <h1 class="move-up">Estilo Romántico</h1>
+                </div> 
+                <h5 class="slogan">Deslumbra con el estilo del milenio en cada paso que des.</h5>
+                <button class="btn-comprar"><a href ="#">Comprar</a></button>
             </div>
             <img src="../imagenes/estilo_retro_fondo.jpg" class="d-block w-100 img-fluid" alt="...">
         </div>
         <div class="carousel-item">
             <div class="carousel-caption d-none d-md-block">
-                <h5 class="text-white">Deslumbra con el estilo del milenio en cada paso que des.</h5>
-                <p>Descripción de la Diapositiva 3.</p>
+                 <div class="estilo">
+                    <h1 class="move-up">Estilo Rockero</h1>
+                </div> 
+                <h5 class="slogan">Deslumbra con el estilo del milenio en cada paso que des.</h5>
+                <button class="btn-comprar"><a href ="#">Comprar</a></button>
             </div>
             <img src="../imagenes/estilo_rockero2_fondo.jpg" class="d-block w-100 img-fluid" alt="...">
         </div>

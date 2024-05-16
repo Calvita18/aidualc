@@ -1,23 +1,11 @@
 /* Estilos index */
-body, html {
-    height: 100%;
-    margin: 0; 
-    padding: 0; 
+.carousel-item:nth-child(1) .btn-comprar {
+    background-color: #d130bf;
 }
 
-/* main {
-    background-image: url("../imagenes/estrellas_rosas.jpg"); 
-    background-size: cover;
-    min-height: 90vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    image-rendering: pixelated;
-    margin: 0; 
-    padding: 0; 
-} */
+.carousel-item:nth-child(3) .btn-comprar {
+    background-color: #00bcd4; 
+}
 
 .btn-comprar {
     background-color: #fdedf8;
@@ -34,21 +22,76 @@ body, html {
 }
 
 .btn-comprar a {
-    color: #333; /* Color del texto del enlace */
-    text-decoration: none; /* Elimina el subrayado */
+    color: #333; 
+    text-decoration: none; 
 }
 
 .btn-comprar a:hover {
-    color: #333; /* Cambia el color del texto al pasar el mouse */
+    color: #333; 
 }
 
-/* .slogan {
-    color: #fff; 
-    font-size: 45px;
-    font-family: 'Playfair Display', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-top: 20px; 
-    text-align: center; 
+.move-up {
+    margin-top: -20px; 
+}
 
-} */
+.estilo{
+    margin-bottom: 350px; 
+    text-transform: uppercase;
+    font-family: "Playfair Display", serif;
+}
+
+.carousel-item:nth-child(1) .estilo {
+    font-size: 24px; /* Tamaño de fuente para la primera foto */
+    color: #333; /* Color de texto para la primera foto */
+}
+
+.carousel-item:nth-child(2) .estilo {
+    font-size: 20px; /* Tamaño de fuente para la segunda foto */
+    color: #ff4081; /* Color de texto para la segunda foto */
+}
+
+.carousel-item:nth-child(3) .estilo {
+    font-size: 28px; /* Tamaño de fuente para la tercera foto */
+    color: #00bcd4; /* Color de texto para la tercera foto */
+}
+
+.carousel-item:nth-child(1) .slogan {
+    font-size: 30px;
+    background-color: #ffffff4d; 
+    color:rgb(22, 22, 22);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para resaltar el texto */
+}
+
+.carousel-item:nth-child(2) .slogan {
+    font-size: 30px; 
+    color: rgb(58, 57, 57); 
+    background-color: #ffffff4d; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para resaltar el texto */
+}
+
+.carousel-item:nth-child(3) .slogan {
+    font-size: 30px; 
+    color: #00bcd4; 
+    background-color: #ffffff4d; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para resaltar el texto */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+}
+
+.carousel-item {
+    height: 600px; /* Altura fija para todos los elementos del carrusel */
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: auto; /* Cambia la altura a automática en dispositivos móviles */
+    }
+}
+
+
+
 
