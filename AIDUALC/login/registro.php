@@ -65,7 +65,7 @@
                         </div>
                         <p class="noVisible" id="mtelefono">Campo obligatorio</p>
 
-                        <div class="g-recaptcha" data-sitekey="6Lci5YopAAAAADt0zUhTYzh6qLWwHOFmHSSEwwCX"></div><br> 
+                        <!-- <div class="g-recaptcha" data-sitekey="6Lci5YopAAAAADt0zUhTYzh6qLWwHOFmHSSEwwCX"></div><br>  -->
 
                         <input type="button" value="Registrarse" id="registrar">
 
@@ -125,12 +125,11 @@
 
         }else{
             $usuario = new Usuario(); 
-             $usuario->registrarCliente($nombre, $apellido, $email, $contra, $fecha, $dir, $telf);
+            $usuario->registrarCliente($nombre, $apellido, $email, $contra, $fecha, $dir, $telf);
     }
 }
             
 ?>
-
 <script>
     (function () {
         $('[data-toggle="tooltip"]').tooltip();

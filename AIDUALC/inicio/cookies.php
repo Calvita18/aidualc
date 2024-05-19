@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../estilos/style_hif.css"> 
     <script src="../js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="../estilos/style_estilos.css">
  </head> 
 <body>
     <header>
     <?php include_once ('../header-footer/header.php'); ?>
     </header>
     
+    <div id="contenido-dinamico">
     <main class="terminos-main-cookies">
         <section>
             <h2 class="titulo">Política de Cookies</h2>
@@ -39,7 +41,7 @@
             <p>Al continuar utilizando nuestro sitio web, usted acepta el uso de cookies de acuerdo con esta política. Si tiene alguna pregunta sobre nuestra política de cookies, no dude en ponerse en contacto con nuestro equipo de atención al cliente.</p>
         </section>
     </main>
-    
+    </div>
     <footer>
     <?php include_once('../header-footer/footer.html');?>
     </footer>

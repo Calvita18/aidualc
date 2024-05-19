@@ -7,6 +7,7 @@
     <title>Aidualc</title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <!-- <script src="https://kit.fontawesome.com/bd054b17a6.js" crossorigin="anonymous"></script> iconos -->
+    <link rel="stylesheet" href="../estilos/style_estilos.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/bootstrap.min.js"></script> 
     <link rel="stylesheet" href="../estilos/style_index.css"> 
@@ -17,7 +18,7 @@
         <?php include_once ('../header-footer/header.php'); ?>
     </header>
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div id="contenido-dinamico" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="carousel-caption d-none d-md-block">

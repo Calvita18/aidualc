@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/bd054b17a6.js" crossorigin="anonymous"></script> 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../estilos/style_hif.css"> 
+    <link rel="stylesheet" href="../estilos/style_estilos.css">
     <script src="../js/bootstrap.min.js"></script> 
  </head> 
 <body>
@@ -14,7 +15,8 @@
     <?php include_once ('../header-footer/header.php'); ?>
     </header>
     
-    <main class="terminos-main">
+    <div id="contenido-dinamico">
+    <main class="terminos-main" >
         <section>
             <h2 class="titulo">Términos de privacidad</h2>
             <p>En nuestra tienda de ropa vintage online, nos comprometemos a proteger la privacidad de nuestros clientes y usuarios. Esta política de privacidad describe cómo recopilamos, usamos y protegemos la información personal que usted nos proporciona.</p>
@@ -45,7 +47,7 @@
             <p>Al utilizar nuestro sitio web, usted acepta nuestra política de privacidad y nos autoriza a recopilar, utilizar y divulgar su información según lo descrito en este documento.</p>
         </section>
     </main>
-    
+    </div>
     <footer>
     <?php include_once('../header-footer/footer.html');?>
     </footer>

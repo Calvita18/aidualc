@@ -1,0 +1,33 @@
+/* estilos_imagenes.css */
+
+.results-container img {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+}
+
+.results-container .item {
+    margin-bottom: 20px;
+}
+
+.results-container p {
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+.results-container .talla-container {
+    margin-top: 5px;
+}
+
+.results-container .talla {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 3px 8px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.results-container .talla.selected {
+    border-color: blue;
+    background-color: lightblue;
+}

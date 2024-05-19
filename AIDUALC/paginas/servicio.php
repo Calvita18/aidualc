@@ -9,6 +9,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/bd054b17a6.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../estilos/style_estilos.css">
 
  
     <title>Servicio al cliente</title>
@@ -16,6 +17,7 @@
 <body>
     <?php require_once("../header-footer/header.php")?>
 
+    <div id="contenido-dinamico">
     <main class="d-flex align-items-center justify-content-center min-vh-80" name="formulario_servicio">
         <section class="container">
             <section class="row form_wrap">
@@ -62,7 +64,7 @@
             </section>
         </section>
     </main>
-
+    </div>
     <div class="toast-container">
         <div class="toast bg-success" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
             <div class="toast-header">

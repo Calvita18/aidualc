@@ -1,9 +1,4 @@
-<?php
-// Verifica si la sesión no está activa
-if (session_status() == PHP_SESSION_NONE) {
-    session_start(); // Inicia la sesión
-}
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -13,8 +8,9 @@ if (session_status() == PHP_SESSION_NONE) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js_deverdad/estilos.js"></script>
     <link rel="stylesheet" href="../estilos/style_hif.css">
-    <script src="https://kit.fontawesome.com/bd054b17a6.js" crossorigin="anonymous"></script> <!--iconos-->
+    <script src="https://kit.fontawesome.com/bd054b17a6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -34,42 +30,37 @@ if (session_status() == PHP_SESSION_NONE) {
                             Estilo Romántico
                         </a>
                         <div class="dropdown-menu" aria-labelledby="estiloRomanticoDropdown">
-                            <a class="dropdown-item" href="#">Camisetas</a>
-                            <a class="dropdown-item" href="#">Pantalones</a>
-                            <a class="dropdown-item" href="#">Accesorios</a>
+                            <button class="dropdown-item" id="camisetaRomantico">Camisetas</button>
+                            <button class="dropdown-item" id="pantalonesRomantico">Pantalones</button>
+                            <button class="dropdown-item" id="accesoriosRomantico">Accesorios</button>
                         </div>
                     </li>
-
                     <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="estiloRetroDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Estilo Retro
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="estiloRetroDropdown">
-                                <a class="dropdown-item" href="#">Camisetas</a>
-                                <a class="dropdown-item" href="#">Pantalones</a>
-                                <a class="dropdown-item" href="#">Accesorios</a>
-                            </div>
+                        <a class="nav-link dropdown-toggle" href="#" id="estiloRetroDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Estilo Retro
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="estiloRetroDropdown">
+                            <button class="dropdown-item" id="camisetaRetro">Camisetas</button>
+                            <button class="dropdown-item" id="pantalonesRetro">Pantalones</button>
+                            <button class="dropdown-item" id="accesoriosRetro">Accesorios</button>
+                        </div>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="../inicio/index.php">AIDUALC</a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="estiloRockeroDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Estilo Rockero
                         </a>
                         <div class="dropdown-menu" aria-labelledby="estiloRockeroDropdown">
-                            <a class="dropdown-item" href="camisetas.php">Camisetas</a>
-                            <a class="dropdown-item" href="#">Pantalones</a>
-                            <a class="dropdown-item" href="#">Accesorios</a>
+                            <button class="dropdown-item" id="camisetaRockero">Camisetas</button>
+                            <button class="dropdown-item" id="pantalonesRockero">Pantalones</button>
+                            <button class="dropdown-item" id="accesoriosRockero">Accesorios</button>
                         </div>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="../paginas/servicio.php">Servicio al cliente</a>
                     </li>
-
                   <li class="iconos-header">
                     <ul class="navbar-nav">
                       <?php if(isset($_SESSION['nombre'])): ?>
@@ -100,5 +91,4 @@ if (session_status() == PHP_SESSION_NONE) {
         });
     </script>
 </body>
-
 </html>
