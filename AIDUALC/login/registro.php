@@ -1,3 +1,56 @@
+<?php
+ 
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        require_once("Usuario.php");
+        $nombre = htmlspecialchars(trim($_POST["nombre"]));
+        $apellido = htmlspecialchars(trim($_POST["apellido"]));
+        $email = htmlspecialchars(trim($_POST["email"]));
+        $contra = trim(htmlspecialchars($_POST["contra"]));
+        $fecha  = htmlspecialchars(trim($_POST["fecha"])); 
+        $dir = htmlspecialchars(trim($_POST["dir"])); 
+        $telf = htmlspecialchars(trim($_POST["telf"])); 
+       
+        
+        if(empty($nombre)){
+            $errors[] = "Debes introducir un nombre.";
+        }
+
+        if(empty($apellido)){
+            $errors[] = "Debes introducir un apellido.";
+        }
+
+        if(empty($email)){
+            $errors[] = "Debes introducir un correo válido.";
+        }
+
+        if(empty($contra)){
+            $errors[] = "Debes introducir una contraseña.";
+        }
+
+        if(empty($fecha)){
+            $errors[] = "Debes introducir una fecha de nacimiento.";
+        }
+
+        if(empty($dir)){
+            $errors[] = "Debes introducir una dirección.";
+        }
+
+        if(empty($telf)){
+            $errors[] = "Debes introducir un teléfono de contacto.";
+        }
+        
+        if(!empty($errors)){
+            foreach($errors as $e){
+                echo $e;
+            }
+
+        }else{
+            $usuario = new Usuario(); 
+            $usuario->registrarCliente($nombre, $apellido, $email, $contra, $fecha, $dir, $telf);
+    }
+}
+            
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,59 +130,7 @@
     </div>
 </div>
 <a href="../inicio/index.php" class="fa-solid fa-chevron-left">Volver</a>
-<?php
-    require_once("Usuario.php");
 
-    if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $nombre = htmlspecialchars(trim($_POST["nombre"]));
-        $apellido = htmlspecialchars(trim($_POST["apellido"]));
-        $email = htmlspecialchars(trim($_POST["email"]));
-        $contra = trim(htmlspecialchars($_POST["contra"]));
-        $fecha  = htmlspecialchars(trim($_POST["fecha"])); 
-        $dir = htmlspecialchars(trim($_POST["dir"])); 
-        $telf = htmlspecialchars(trim($_POST["telf"])); 
-       
-        
-        if(empty($nombre)){
-            $errors[] = "Debes introducir un nombre.";
-        }
-
-        if(empty($apellido)){
-            $errors[] = "Debes introducir un apellido.";
-        }
-
-        if(empty($email)){
-            $errors[] = "Debes introducir un correo válido.";
-        }
-
-        if(empty($contra)){
-            $errors[] = "Debes introducir una contraseña.";
-        }
-
-        if(empty($fecha)){
-            $errors[] = "Debes introducir una fecha de nacimiento.";
-        }
-
-        if(empty($dir)){
-            $errors[] = "Debes introducir una dirección.";
-        }
-
-        if(empty($telf)){
-            $errors[] = "Debes introducir un teléfono de contacto.";
-        }
-        
-        if(!empty($errors)){
-            foreach($errors as $e){
-                echo $e;
-            }
-
-        }else{
-            $usuario = new Usuario(); 
-            $usuario->registrarCliente($nombre, $apellido, $email, $contra, $fecha, $dir, $telf);
-    }
-}
-            
-?>
 <script>
     (function () {
         $('[data-toggle="tooltip"]').tooltip();

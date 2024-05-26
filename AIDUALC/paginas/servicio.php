@@ -16,8 +16,6 @@
 </head>
 <body>
     <?php require_once("../header-footer/header.php")?>
-
-    <div id="contenido-dinamico">
     <main class="d-flex align-items-center justify-content-center min-vh-80" name="formulario_servicio">
         <section class="container">
             <section class="row form_wrap">

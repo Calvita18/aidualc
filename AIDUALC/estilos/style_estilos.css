@@ -1,33 +1,116 @@
-/* estilos_imagenes.css */
-
-.results-container img {
-    width: 100px;
-    height: auto;
-    margin: 5px;
+/* Estilos para el cuerpo */
+body {
+    margin: 100;
+    padding: 0;
+    background-size: cover;
+    font-family: Arial, sans-serif;
 }
 
-.results-container .item {
-    margin-bottom: 20px;
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 20px auto; /* Ajustar margen superior e inferior */
+    padding: 20px;
 }
 
-.results-container p {
-    font-size: 12px;
-    margin: 3px 0;
+/* Estilos para el contenedor de resultados */
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.results-container .talla-container {
-    margin-top: 5px;
+/* Estilos para los elementos de producto */
+.item {
+    width: calc(33.33% - 40px);
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
-.results-container .talla {
+.item:hover {
+    transform: translateY(-3px); /* Movimiento hacia arriba al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.item img {
+    width: 50%; /* Reducción del tamaño de la imagen */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.item-content {
+    padding: 10px;
+}
+
+.item-content h2 {
+    font-size: 1rem; /* Reducción del tamaño del título */
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+.item-content p {
+    font-size: 0.9rem; /* Reducción del tamaño del texto */
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.tallas-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.talla {
     display: inline-block;
-    border: 1px solid #ccc;
-    padding: 3px 8px;
-    margin-right: 5px;
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #ff6600;
+    color: #ffffff;
+    border-radius: 3px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.results-container .talla.selected {
-    border-color: blue;
-    background-color: lightblue;
+.talla:hover {
+    background-color: #ff9933;
 }
+
+.button-add-to-cart {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-add-to-cart:hover {
+    background-color: #ff9933;
+}
+
+/* Media queries para hacer el diseño responsive */
+/* Media queries para hacer el diseño responsive */
+@media screen and (max-width: 768px) {
+    .item {
+        width: calc(50% - 20px); /* Cambiar el ancho de los items en pantallas pequeñas */
+        margin-right: 20px; /* Agregar un margen derecho */
+        margin-left: auto; /* Centrar los elementos */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .item {
+        width: calc(100% - 20px); /* Cambiar el ancho de los items en pantallas aún más pequeñas */
+        margin-right: 20px; /* Agregar un margen derecho */
+        margin-left: auto; /* Centrar los elementos */
+    }
+}
+

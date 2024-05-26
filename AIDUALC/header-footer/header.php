@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,9 +11,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js_deverdad/estilos.js"></script>
+    <!-- <script src="../js_deverdad/estilos.js"></script> -->
     <link rel="stylesheet" href="../estilos/style_hif.css">
     <script src="https://kit.fontawesome.com/bd054b17a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estilos/style_estilos.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -27,22 +31,22 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="estiloRomanticoDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Estilo Romántico
+                            Coquette
                         </a>
                         <div class="dropdown-menu" aria-labelledby="estiloRomanticoDropdown">
-                            <button class="dropdown-item" id="camisetaRomantico">Camisetas</button>
-                            <button class="dropdown-item" id="pantalonesRomantico">Pantalones</button>
-                            <button class="dropdown-item" id="accesoriosRomantico">Accesorios</button>
+                                <a class="dropdown-item" href="../paginas/coquette_camisetas.php">Camisetas</a>
+                                <a class="dropdown-item" href="../paginas/coquette_pantalones.php">Pantalones</a>
+                                <a class="dropdown-item" href="../paginas/coquette_accesorios.php">Accesorios</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="estiloRetroDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Estilo Retro
+                             Retro
                         </a>
                         <div class="dropdown-menu" aria-labelledby="estiloRetroDropdown">
-                            <button class="dropdown-item" id="camisetaRetro">Camisetas</button>
-                            <button class="dropdown-item" id="pantalonesRetro">Pantalones</button>
-                            <button class="dropdown-item" id="accesoriosRetro">Accesorios</button>
+                                <a class="dropdown-item" href="../paginas/retro_camisetas.php">Camisetas</a>
+                                <a class="dropdown-item" href="../paginas/retro_pantalones.php">Pantalones</a>
+                                <a class="dropdown-item" href="../paginas/retro_accesorios.php">Accesorios</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -50,12 +54,12 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="estiloRockeroDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Estilo Rockero
+                            Punk
                         </a>
                         <div class="dropdown-menu" aria-labelledby="estiloRockeroDropdown">
-                            <button class="dropdown-item" id="camisetaRockero">Camisetas</button>
-                            <button class="dropdown-item" id="pantalonesRockero">Pantalones</button>
-                            <button class="dropdown-item" id="accesoriosRockero">Accesorios</button>
+                                <a class="dropdown-item" href="../paginas/punk_camisetas.php">Camisetas</a>
+                                <a class="dropdown-item" href="../paginas/punk_pantalones.php">Pantalones</a>
+                                <a class="dropdown-item" href="../paginas/punk_accesorios.php">Accesorios</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -74,7 +78,7 @@
                         <li class="iconos-header2">
                         <a href="../login/login.php"><i class="fas fa-user"></i></a>
                         <?php endif; ?>
-                        <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        <a href="../carrito/ver_carrito.php"><i class="fas fa-shopping-basket"></i></a>
                         </li>
                     </ul>
                   </li>

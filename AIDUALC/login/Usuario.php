@@ -19,7 +19,7 @@ class Usuario{
     }
 
     public function verificarCliente($nombre, $pass){
-        $query_cliente = "SELECT nombre, contrasena FROM clientes WHERE nombre = :nombre AND contrasena = md5(:pass)";
+        $query_cliente = "SELECT id, nombre, contrasena FROM clientes WHERE nombre = :nombre AND contrasena = md5(:pass)";
     
         $stmt_cliente = $this->conn->prepare($query_cliente);
     
@@ -30,7 +30,9 @@ class Usuario{
         if($stmt_cliente->rowCount() > 0){
             $usuario = $stmt_cliente->fetch(PDO::FETCH_ASSOC);
             session_start();
+            $_SESSION["id"] = $usuario['id'];
             $_SESSION["nombre"] = $usuario['nombre']; 
+          
             header("Location: ../inicio/index.php");  
            
         }else{
