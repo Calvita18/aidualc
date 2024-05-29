@@ -27,7 +27,7 @@ try {
     exit;
 }
 
-$total = 0; // Inicializar la variable $total
+$total = 0;
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ $total = 0; // Inicializar la variable $total
 
     <script>
         function updateCartItem(id, action) {
-            fetch('../carrito/actualizar_carrito.php', {
+            fetch('actualizar_carrito.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ $total = 0; // Inicializar la variable $total
         }
 
         function deleteCartItem(id) {
-            fetch('../carrito/borrar_carrito.php', {
+            fetch('borrar_carrito.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -107,25 +107,7 @@ $total = 0; // Inicializar la variable $total
         }
 
         function finalizarCompra() {
-            fetch('checkout.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ action: 'finalizar_compra' })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert('Compra finalizada con éxito.');
-                    window.location.href = 'metodo_pago.php?pedido_id=' + data.pedido_id;
-                } else {
-                    alert('Error: ' + data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+            window.location.href = 'checkout.php';
         }
     </script>
 </body>

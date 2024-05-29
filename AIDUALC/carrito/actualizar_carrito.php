@@ -2,15 +2,14 @@
 session_start();
 require_once("../login/config.php");
 
-header('Content-Type: application/json');
-
 if (!isset($_SESSION['id'])) {
-    echo json_encode(['success' => false, 'message' => 'Tienes que iniciar sesión']);
+    echo json_encode(['success' => false, 'message' => 'Debes iniciar sesión para actualizar el carrito.']);
     exit;
 }
 
+$cliente_id = $_SESSION['id'];
 $data = json_decode(file_get_contents('php://input'), true);
-$id = $data['id'];
+$carrito_id = $data['id'];
 $action = $data['action'];
 
 try {
@@ -18,37 +17,20 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if ($action === 'increase') {
-        $query = "UPDATE carrito SET cantidad = cantidad + 1 WHERE id = :id";
+        $query = "UPDATE carrito SET cantidad = cantidad + 1 WHERE id = :carrito_id AND cliente_id = :cliente_id";
     } elseif ($action === 'decrease') {
-        // Check current quantity
-        $checkQuery = "SELECT cantidad FROM carrito WHERE id = :id";
-        $checkStmt = $conn->prepare($checkQuery);
-        $checkStmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $checkStmt->execute();
-        $row = $checkStmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($row['cantidad'] > 1) {
-            $query = "UPDATE carrito SET cantidad = cantidad - 1 WHERE id = :id";
-        } else {
-            $query = "DELETE FROM carrito WHERE id = :id";
-        }
+        $query = "UPDATE carrito SET cantidad = cantidad - 1 WHERE id = :carrito_id AND cliente_id = :cliente_id AND cantidad > 1";
     } else {
-        echo json_encode(['success' => false, 'message' => 'Acción no válida']);
+        echo json_encode(['success' => false, 'message' => 'Acción inválida.']);
         exit;
     }
 
     $stmt = $conn->prepare($query);
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->bindParam(':carrito_id', $carrito_id, PDO::PARAM_INT);
+    $stmt->bindParam(':cliente_id', $cliente_id, PDO::PARAM_INT);
     $stmt->execute();
 
-    if ($stmt->rowCount() > 0) {
-        $response = ['success' => true];
-    } else {
-        $response = ['success' => false, 'message' => 'No se pudo actualizar la cantidad'];
-    }
-
-    echo json_encode($response);
-
+    echo json_encode(['success' => true, 'message' => 'Carrito actualizado correctamente.']);
 } catch (PDOException $e) {
     echo json_encode(['success' => false, 'message' => 'Error de conexión: ' . $e->getMessage()]);
 }

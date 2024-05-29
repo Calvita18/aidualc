@@ -80,6 +80,7 @@ function selectSize(size) {
             echo '<p>' . htmlspecialchars($row['descripcion']) . '</p>';
             echo '<p> ' . htmlspecialchars($row['precio']) . '€</p>';
             echo '<p>Color: ' . htmlspecialchars($row['color']) . '</p>';
+            echo '<p>Stock: ' . htmlspecialchars($row['stock']) . '</p>';
             echo '<div class="tallas-container">';
             echo '<span class="talla" onclick="selectSize(this)">S</span>';
             echo '<span class="talla" onclick="selectSize(this)">M</span>';

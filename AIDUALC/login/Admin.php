@@ -18,16 +18,18 @@ class Admin{
     }
 
    public function verificarAdmin($nombre, $pass){
-        $query = "SELECT nombre, contrasena FROM administradores WHERE nombre = :nombre AND contrasena = md5(:pass)";
+    $query = "SELECT id, nombre, contrasena, rol FROM clientes WHERE nombre = :nombre AND contrasena = :pass";
+    $stmt = $this->conn->prepare($query);
+    $parametros = [':usuario' => $nombre, ':contra' => $pass];
+    $stmt->execute($parametros);
 
-        $stmt = $this->conn->prepare($query);
-
-        $stmt->execute([':nombre' => $nombre, ':pass' => $pass]);
-
-        if($stmt->rowCount() > 0){
-            session_start();
-            $_SESSION["nombre"] = $nombre;
-            header("Location: ../inicio/index_admin.html"); 
+    if ($stmt->rowCount() > 0) {
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+        session_start();
+        $_SESSION["id"] = $usuario['id'];
+        $_SESSION["usuario"] = $usuario['nombre'];
+        $_SESSION["rol"] = $usuario['rol'];  
+        header("Location: ../inicio/index_admin.php");
             
         } else {
             return false;

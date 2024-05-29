@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once("../login/config.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -65,6 +66,15 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="../paginas/servicio.php">Servicio al cliente</a>
                     </li>
+
+                    <li>
+                    <?php if(isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin'): ?>
+                          <li class="nav-item">
+                            <a class="nav-link" href="administrador.php">Administración</a>
+                          </li>
+                    <?php endif; ?>
+                    </li>
+
                   <li class="iconos-header">
                     <ul class="navbar-nav">
                       <?php if(isset($_SESSION['nombre'])): ?>

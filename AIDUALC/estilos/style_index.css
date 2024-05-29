@@ -1,4 +1,36 @@
-/* Estilos index */
+.carousel-item img {
+    width: 30%; /* Reduce el ancho de la imagen */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.carousel-item {
+    height: 80vh; /* Ajusta la altura del contenedor del carrusel */
+    display: flex; /* Utiliza flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    position: relative; /* Necesario para posicionar correctamente el contenido */
+    padding-top: 20px; /* Añade un poco de espacio en la parte superior */
+}
+
+.carousel-caption {
+    position: relative; /* Asegura que el texto esté correctamente posicionado */
+    top: 0; /* Coloca el contenido al principio del contenedor */
+    transform: none; /* Elimina la transformación para centrar el contenido */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Añade margen superior */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #fdedf8; /* Cambia el color de fondo de las flechas a negro */
+    border-radius: 50%; /* Añade un borde redondeado si lo deseas */
+}
+
+/* Otros estilos existentes */
+
 .carousel-item:nth-child(1) .btn-comprar {
     background-color: #d130bf;
 }
@@ -29,13 +61,12 @@
 .btn-comprar a:hover {
     color: #333; 
 }
-
+/* 
 .move-up {
-    margin-top: -20px; 
-}
+    margin-top: 2px; 
+} */
 
-.estilo{
-    margin-bottom: 350px; 
+.estilo {
     text-transform: uppercase;
     font-family: "Playfair Display", serif;
 }
@@ -76,22 +107,8 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para resaltar el texto */
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 100%; /* Establece una altura fija para todas las imágenes */
-    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-}
-
-.carousel-item {
-    height: 600px; /* Altura fija para todos los elementos del carrusel */
-}
-
 @media (max-width: 768px) {
     .carousel-item {
         height: auto; /* Cambia la altura a automática en dispositivos móviles */
     }
 }
-
-
-
-

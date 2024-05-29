@@ -18,48 +18,52 @@
         <?php include_once ('../header-footer/header.php'); ?>
     </header>
 
-    <div id="contenido-dinamico" class="carousel slide" data-bs-ride="carousel">
+    <div id="contenido-dinamico" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="carousel-caption d-none d-md-block">
                 <div class="estilo">
-                    <h1 class="move-up">Estilo retro</h1>
-                </div>             
+                    <h1 class="move-up">R E T R O</h1>
+                </div>
+                <img src="../imagenes/kitty_retro.jpg" class="d-block img-fluid" alt="...">
                 <h5 class="slogan">Deslumbra con el estilo del milenio en cada paso que des.</h5>
-                <button class="btn-comprar"><a href ="#">Comprar</a></button>
+                <button class="btn-comprar"><a href="#">Comprar</a></button>
             </div>
-            <img src="../imagenes/estilo_romantico_fondo.jpg" class="d-block w-100 img-fluid" alt="...">
         </div>
         <div class="carousel-item">
             <div class="carousel-caption d-none d-md-block">
                 <div class="estilo">
-                    <h1 class="move-up">Estilo Romántico</h1>
-                </div> 
+                    <h1 class="move-up">C O Q U E T T E</h1>
+                </div>
+                <img src="../imagenes/kitty_coquette.jpg" class="d-block img-fluid" alt="...">
                 <h5 class="slogan">Deslumbra con el estilo del milenio en cada paso que des.</h5>
-                <button class="btn-comprar"><a href ="#">Comprar</a></button>
+                <button class="btn-comprar"><a href="#">Comprar</a></button>
             </div>
-            <img src="../imagenes/estilo_retro_fondo.jpg" class="d-block w-100 img-fluid" alt="...">
         </div>
         <div class="carousel-item">
             <div class="carousel-caption d-none d-md-block">
-                 <div class="estilo">
-                    <h1 class="move-up">Estilo Rockero</h1>
-                </div> 
+                <div class="estilo">
+                    <h1 class="move-up">P U N K</h1>
+                </div>
+                <img src="../imagenes/kitty_punk.jpg" class="d-block img-fluid" alt="...">
                 <h5 class="slogan">Deslumbra con el estilo del milenio en cada paso que des.</h5>
-                <button class="btn-comprar"><a href ="#">Comprar</a></button>
+                <button class="btn-comprar"><a href="#">Comprar</a></button>
             </div>
-            <img src="../imagenes/estilo_rockero2_fondo.jpg" class="d-block w-100 img-fluid" alt="...">
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#contenido-dinamico" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#contenido-dinamico" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Siguiente</span>
     </button>
 </div>
+
+
+
+
 
 
     <footer>

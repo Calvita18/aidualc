@@ -19,7 +19,7 @@ class Usuario{
     }
 
     public function verificarCliente($nombre, $pass){
-        $query_cliente = "SELECT id, nombre, contrasena FROM clientes WHERE nombre = :nombre AND contrasena = md5(:pass)";
+        $query_cliente = "SELECT id, nombre, contrasena, rol FROM clientes WHERE nombre = :nombre AND contrasena = md5(:pass)";
     
         $stmt_cliente = $this->conn->prepare($query_cliente);
     
@@ -32,6 +32,7 @@ class Usuario{
             session_start();
             $_SESSION["id"] = $usuario['id'];
             $_SESSION["nombre"] = $usuario['nombre']; 
+            $_SESSION["rol"] = $usuario['rol']; 
           
             header("Location: ../inicio/index.php");  
            

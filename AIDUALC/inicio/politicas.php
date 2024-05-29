@@ -15,7 +15,6 @@
     <?php include_once ('../header-footer/header.php'); ?>
     </header>
     
-    <div id="contenido-dinamico">
     <main class="terminos-main" >
         <section>
             <h2 class="titulo">Términos de privacidad</h2>
