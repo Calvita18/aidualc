@@ -10,7 +10,7 @@ try {
             FROM productos p
             JOIN categorias c ON p.categoria_id = c.id
             JOIN estilos e ON p.id_estilo = e.id
-            WHERE p.categoria_id = 1 AND p.id_estilo = 2";
+            WHERE p.categoria_id = 1 AND p.id_estilo = 3";
             
     $stmt = $conn->query($sql);
 
@@ -19,30 +19,37 @@ try {
     } else {
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="../estilos/style_estilos.css">
-<script src="../js_deverdad/estilos.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../estilos/style_estilos.css">
+  <script src="../js_deverdad/estilos.js"></script>
 </head>
 <body>
+<div class="row mt-5">
     <div class="results-container">
-<?php
+        <?php
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             echo '<div class="item">';
             echo '<img src="data:image/jpeg;base64,' . base64_encode($row['imagen']) . '" />';
-            echo '<p> ' . htmlspecialchars($row['nombre']) . '</p>';
+            echo '<p class="nombre-producto">' . htmlspecialchars($row['nombre']) . '</p>';
             echo '<p>' . htmlspecialchars($row['descripcion']) . '</p>';
             echo '<p> ' . htmlspecialchars($row['precio']) . '€</p>';
-            echo '<p>Color: ' . htmlspecialchars($row['color']) . '</p>';
+            echo '<p>Stock: ' . htmlspecialchars($row['stock']) . '</p>';
             echo '<div class="tallas-container">';
-            echo '<span class="talla">S</span>';
-            echo '<span class="talla">M</span>';
-            echo '<span class="talla">L</span>';
+            echo '<span class="talla" onclick="seleccionarTalla(this)">S</span>';
+            echo '<span class="talla" onclick="seleccionarTalla(this)">M</span>';
+            echo '<span class="talla" onclick="seleccionarTalla(this)">L</span>';
             echo '</div>';
+            echo '<button class="anadir_carrito" onclick="agregarAlCarrito(' . $row["id"] . ', this)">Añadir al carrito</button>';
             echo '</div>';
         }
-?>
+        ?>
     </div>
+</div>
+
 </body>
 </html>
 <?php

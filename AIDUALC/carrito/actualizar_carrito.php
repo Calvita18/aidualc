@@ -19,7 +19,19 @@ try {
     if ($action === 'increase') {
         $query = "UPDATE carrito SET cantidad = cantidad + 1 WHERE id = :carrito_id AND cliente_id = :cliente_id";
     } elseif ($action === 'decrease') {
-        $query = "UPDATE carrito SET cantidad = cantidad - 1 WHERE id = :carrito_id AND cliente_id = :cliente_id AND cantidad > 1";
+        // Check the current quantity of the product in the cart
+        $check_query = "SELECT cantidad FROM carrito WHERE id = :carrito_id AND cliente_id = :cliente_id";
+        $check_stmt = $conn->prepare($check_query);
+        $check_stmt->bindParam(':carrito_id', $carrito_id, PDO::PARAM_INT);
+        $check_stmt->bindParam(':cliente_id', $cliente_id, PDO::PARAM_INT);
+        $check_stmt->execute();
+        $current_quantity = $check_stmt->fetchColumn();
+
+        if ($current_quantity > 1) {
+            $query = "UPDATE carrito SET cantidad = cantidad - 1 WHERE id = :carrito_id AND cliente_id = :cliente_id";
+        } else {
+            $query = "DELETE FROM carrito WHERE id = :carrito_id AND cliente_id = :cliente_id";
+        }
     } else {
         echo json_encode(['success' => false, 'message' => 'Acción inválida.']);
         exit;

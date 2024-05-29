@@ -1,16 +1,24 @@
 /* Estilos para el cuerpo */
 body {
-    margin: 100;
+    margin: 0;
     padding: 0;
     background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
 }
+
+.nombre-producto {
+    color: red; 
+    font-weight: bold;
+}
+
 
 /* Estilos para el contenedor principal */
 .container {
-    max-width: 900px;
-    margin: 20px auto; /* Ajustar margen superior e inferior */
+    max-width: 90%;
+    margin: 20px auto; 
     padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
 /* Estilos para el contenedor de resultados */
@@ -18,11 +26,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 auto; 
+
 }
 
 /* Estilos para los elementos de producto */
 .item {
-    width: calc(33.33% - 40px);
+    display: flex; /* Cambiar a un layout de caja flexible */
+    flex-direction: column; /* Apilar el contenido verticalmente */
+    align-items: center; /* Centrar el contenido horizontalmente */
+    width: calc(33.33% - 20px);
     margin-bottom: 30px;
     background-color: #ffffff;
     border: 2px solid #ff69b4;
@@ -34,29 +47,35 @@ body {
     transition: all 0.3s ease;
 }
 
+.item-content {
+    padding: 10px;
+
+    
+}
+
 .item:hover {
-    transform: translateY(-3px); /* Movimiento hacia arriba al pasar el ratón */
+    transform: translateY(-5px); /* Ajustar el efecto de levantamiento */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .item img {
-    width: 50%; /* Reducción del tamaño de la imagen */
+    width: 50%; /* Establece el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Para mantener la proporción de la imagen */
     border-radius: 10px;
     margin-bottom: 15px;
+    align-self: center; /* Centrar la imagen horizontalmente */
 }
 
-.item-content {
-    padding: 10px;
-}
 
 .item-content h2 {
-    font-size: 1rem; /* Reducción del tamaño del título */
+    font-size: 1.2rem; /* Aumentar el tamaño del título */
     margin-bottom: 10px;
-    color: #ff6600;
+    color: #ff69b4;
+    flex-grow: 1; 
 }
 
 .item-content p {
-    font-size: 0.9rem; /* Reducción del tamaño del texto */
+    font-size: 1rem; /* Aumentar el tamaño del texto */
     margin-bottom: 15px;
     color: #333333;
 }
@@ -64,53 +83,57 @@ body {
 .tallas-container {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
 .talla {
     display: inline-block;
     margin: 5px;
     padding: 8px 12px;
-    background-color: #ff6600;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #ff69b4;
+    border: 2px solid #ff69b4;
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.talla:hover {
-    background-color: #ff9933;
+.talla.selected {
+    background-color: #ff69b4;
+    color: #ffffff;
 }
 
-.button-add-to-cart {
-    background-color: #ff6600;
+.anadir_carrito {
+    background: linear-gradient(to right, #ff69b4, #ffafd7); 
     color: #ffffff;
     border: none;
-    padding: 8px 16px;
-    border-radius: 3px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 4px;
+    font-size: 1rem;
 }
 
-.button-add-to-cart:hover {
-    background-color: #ff9933;
+.anadir_carrito:hover {
+    background-color: #fe9acc;
 }
 
 /* Media queries para hacer el diseño responsive */
-/* Media queries para hacer el diseño responsive */
+@media screen and (max-width: 1024px) {
+    .item {
+        width: calc(50% - 20px); /* Ajustar el ancho de los elementos en pantallas medianas */
+    }
+}
+
 @media screen and (max-width: 768px) {
     .item {
-        width: calc(50% - 20px); /* Cambiar el ancho de los items en pantallas pequeñas */
-        margin-right: 20px; /* Agregar un margen derecho */
-        margin-left: auto; /* Centrar los elementos */
+        width: calc(50% - 20px); /* Ajustar el ancho de los elementos en pantallas pequeñas */
     }
 }
 
 @media screen and (max-width: 576px) {
     .item {
-        width: calc(100% - 20px); /* Cambiar el ancho de los items en pantallas aún más pequeñas */
-        margin-right: 20px; /* Agregar un margen derecho */
-        margin-left: auto; /* Centrar los elementos */
+        width: calc(100% - 20px); /* Ajustar el ancho de los elementos en pantallas aún más pequeñas */
     }
 }
-

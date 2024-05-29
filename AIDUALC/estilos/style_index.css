@@ -1,43 +1,12 @@
-.carousel-item img {
-    width: 30%; /* Reduce el ancho de la imagen */
-    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
-    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-}
+/* Estilos index */
 
-.carousel-item {
-    height: 80vh; /* Ajusta la altura del contenedor del carrusel */
-    display: flex; /* Utiliza flexbox */
-    flex-direction: column; /* Coloca los elementos en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    position: relative; /* Necesario para posicionar correctamente el contenido */
-    padding-top: 20px; /* Añade un poco de espacio en la parte superior */
-}
-
-.carousel-caption {
-    position: relative; /* Asegura que el texto esté correctamente posicionado */
-    top: 0; /* Coloca el contenido al principio del contenedor */
-    transform: none; /* Elimina la transformación para centrar el contenido */
-    text-align: center; /* Centra el texto */
-    margin-top: 20px; /* Añade margen superior */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #fdedf8; /* Cambia el color de fondo de las flechas a negro */
-    border-radius: 50%; /* Añade un borde redondeado si lo deseas */
-}
-
-/* Otros estilos existentes */
-
-.carousel-item:nth-child(1) .btn-comprar {
+/* .carousel-item:nth-child(1) .btn-comprar {
     background-color: #d130bf;
 }
 
 .carousel-item:nth-child(3) .btn-comprar {
     background-color: #00bcd4; 
-}
+} */
 
 .btn-comprar {
     background-color: #fdedf8;
@@ -61,54 +30,75 @@
 .btn-comprar a:hover {
     color: #333; 
 }
-/* 
-.move-up {
-    margin-top: 2px; 
+
+/* .move-up {
+    margin-top: -20px; 
 } */
 
-.estilo {
+.estilo{
+    margin-bottom: 295px; 
     text-transform: uppercase;
-    font-family: "Playfair Display", serif;
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 .carousel-item:nth-child(1) .estilo {
     font-size: 24px; /* Tamaño de fuente para la primera foto */
-    color: #333; /* Color de texto para la primera foto */
+    color: #781d8d; /* Color de texto para la primera foto */
 }
 
 .carousel-item:nth-child(2) .estilo {
     font-size: 20px; /* Tamaño de fuente para la segunda foto */
-    color: #ff4081; /* Color de texto para la segunda foto */
+    color: #fb6d9d; /* Color de texto para la segunda foto */
 }
 
 .carousel-item:nth-child(3) .estilo {
     font-size: 28px; /* Tamaño de fuente para la tercera foto */
-    color: #00bcd4; /* Color de texto para la tercera foto */
+    color: #7afff6; /* Color de texto para la tercera foto */
 }
 
-.carousel-item:nth-child(1) .slogan {
+/* .carousel-item:nth-child(1) .slogan {
     font-size: 30px;
     background-color: #ffffff4d; 
     color:rgb(22, 22, 22);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para resaltar el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .carousel-item:nth-child(2) .slogan {
     font-size: 30px; 
     color: rgb(58, 57, 57); 
     background-color: #ffffff4d; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para resaltar el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .carousel-item:nth-child(3) .slogan {
     font-size: 30px; 
     color: #00bcd4; 
     background-color: #ffffff4d; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para resaltar el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+} */
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
 }
+
+.carousel-item {
+    height: 600px; /* Altura fija para todos los elementos del carrusel */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #faace1; /* Cambia el color de fondo de las flechas a negro */
+    border-radius: 50%; /* Añade un borde redondeado si lo deseas */
+}
+
 
 @media (max-width: 768px) {
     .carousel-item {
         height: auto; /* Cambia la altura a automática en dispositivos móviles */
     }
 }
+
+
+

@@ -1,0 +1,123 @@
+/* estilo carrito */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff69b4; 
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #ff69b4; 
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #ffb6c1; 
+    color: #ff69b4; 
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+table tr:hover {
+    background-color: #ffe4e1; 
+}
+
+button {
+    background-color: #ff69b4; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+}
+
+button:hover {
+    background-color: #ff1493; 
+}
+
+.boton {
+    background-color: #ff69b4; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+}
+
+.boton:hover {
+    background-color: #ff1493; 
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+    color: #ff69b4; 
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    .boton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        width: 100%;
+    }
+
+    table th, table td {
+        display: block;
+        text-align: right;
+    }
+
+    table th::after, table td::after {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table th, table td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .boton {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

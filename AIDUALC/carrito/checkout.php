@@ -48,14 +48,14 @@ try {
     <script src="https://www.paypal.com/sdk/js?client-id=AbxlCyKkthvLSNTahiNEtiTSHxsMlm8e2EIt91MsBLdwhS9kgPDLJw4wSYfRwsnTXJ0-rUQvSVWsx7_Q&currency=EUR"></script>
 </head>
 <body>
-    <h1>Checkout</h1>
+    <h1>Elige el método de pago:</h1>
     <p>Total: €<?= number_format($total, 2) ?></p>
     <div id="paypal-button-container"></div>
 
     <script>
         paypal.Buttons({
             style: {
-                color: 'blue',
+                // color: 'blue',
                 shape: 'pill',
                 label: 'pay'
             },
